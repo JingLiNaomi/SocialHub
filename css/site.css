@@ -1,0 +1,11 @@
+/* CSS Document */
+.friend-list-row 
+{
+	height:40px;
+}
+
+.img-auto-size
+{
+	max-height:100%;
+	max-width:100%;
+}

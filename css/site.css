@@ -3,10 +3,10 @@
 {
 	height:120px;
 	padding-top: 10px;
-	padding-left: 15px;
+
 	padding-bottom: 10px;
-	margin-left:5%;
 }
+
 
 .msg-list-row
 {
@@ -14,7 +14,12 @@
 	padding-top: 5px;
 	padding-left: 7px;
 	padding-bottom: 5px;
-	margin-left:5%;
+}
+
+hr 
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .friends-list-body
@@ -32,13 +37,26 @@
 {
 	position:relative;
 	padding-top: 15px;
-	font-size: 14px;
-	margin-left: -5%;
+	padding-bottom: 15px;
+	font-size: 12px;
+	text-align:left;
+	height:inherit;
+	margin-left: -3%;
 }	
 
 .msg-text
 {
+	position:relative;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-align:left;
+	font-size: 14px;
+	height:inherit;
+}
+
+.date-text
+{
+	font-size:small;
 }
 
 .img 

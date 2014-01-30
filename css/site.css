@@ -8,6 +8,15 @@
 	margin-left:5%;
 }
 
+.msg-list-row
+{
+	height:60px;
+	padding-top: 5px;
+	padding-left: 7px;
+	padding-bottom: 5px;
+	margin-left:5%;
+}
+
 .friends-list-body
 {
 	width: 650px;
@@ -17,12 +26,30 @@
 
 .friends-names
 {
+	
+}
+.friend-name-msg
+{
+	position:relative;
+	padding-top: 15px;
+	font-size: 14px;
 	margin-left: -5%;
+}	
+
+.msg-text
+{
+	text-align:left;
 }
 
 .img 
 {
 	width: 130px;
+}
+
+.img-div
+{
+	position:relative;
+	margin-right: -5%;
 }
 
 .friend-btns

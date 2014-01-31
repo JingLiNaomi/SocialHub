@@ -1,6 +1,10 @@
 /* CSS Document */
 
-
+.msgTextArea
+{
+    width: 97%;
+    height: 80px;
+}
 
 
 .commentTextArea
@@ -11,10 +15,10 @@
 
 .publishContainer
 {
-    width: 65%;
+    display:block;
     text-align: right;
-     background-color: #F2F2F2;
-    border-color: #B4BBCD;
+     background-color: #EEF1F6;
+    border-color: white;
     border-image: none;
     border-style: solid;
     border-width: 1px;

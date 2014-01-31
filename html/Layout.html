@@ -49,7 +49,7 @@
     <!-- Nav Tabs -->
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#">My profile</a></li>
+        <li class="active"><a href="#myprofile">My profile</a></li>
         <li><a href="#myfriends">My friends</a></li>
         <li><a href="#">My albums</a></li>
         <li><a href="#mymessages">My messages</a></li>
@@ -170,11 +170,104 @@
 </ul>
 </script> 
 
+<script type="text/x-handlebars" id="myprofile">
+<!-- My Profile -->
+<div class="row"> 
+  <!-- Left Column -->
+  <div class="col-md-3"> 
+    <!-- Profile Photo -->
+    <div class="row"> <img src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-rounded" width="200" height="200"> </div>
+    <!-- My Links -->
+    <div class="row" style="margin-top:20px">
+      <ul class="list-unstyled">
+        <li> <a href="..">Friends</a> </li>
+        <li> <a href="../MyAlbums">Albums</a> </li>
+        <li> <a href="../MyBlog">Blog</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Right Column  -->
+  <div class="col-md-6"> 
+    <!-- Name Section -->
+    <div class="row">
+      <h4>{Full Name}</h4>
+      <p>{last status}</p>
+    </div>
+    
+    <!-- Personal Info -->
+    <div class="row">
+      <div class="alert alert-info" id="toggleInfo">Hide/Show personal details</div>
+      <div id="info">
+        <p>City: {city}</p>
+        <p>Country: {country}</p>
+        <p>Gender: {Gender}</p>
+        <p>Date of Birth: {DOB}</p>
+        <p>School: {School}</p>
+        <p>Relationship Status: {Relationship}</p>
+        <p>Occupation: {Occupation}</p>
+      </div>
+      <hr>
+    </div>
+	
+	 <!-- Post Status -->
+	<div class="publishContainer row">
+    <textarea class="msgTextArea" id="txtMessage" style="height:3em;" placeholder="What's on your mind?"></textarea>
+    <input type="button" value="Post" id="btnShare" class="btn btn-primary">
+</div>
+
+    <!-- Status List -->
+    <div class="row">
+      <ul class="list-unstyled">
+        <li class="postHolder"> 
+          <!-- Status Section -->
+          <div class="row">
+            <div class="col-md-1"> <img src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"> </div>
+            <div style="margin-left:30px">
+              <p><a>{full name}</a>: <span>{status text}</span></p>
+              <div class="postFooter"> <span class="timeago">{posted date time}</span></div>
+            </div>
+            <div class="commentSection">
+            <div style="display: block">
+              <ul>
+                <li class="commentHolder">
+                  <div class="row" style="margin-left:-45px">
+                    <div class="col-md-1"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"></div>
+                    <div style="margin-left:30px">
+                      <p><a>{commenter name}</a>: <span>{comment}</span></p>
+                      <div class="postFooter"> <span class="timeago">{commented date time}</span></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              </div>
+              <div style="display: block" class="publishComment">
+                <textarea class="commentTextArea" placeholder="write a comment..."></textarea>
+                <input type="button"  value="Comment" class="btn btn-primary"/>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<link href="../css/post.css" rel="stylesheet" type="text/css" />
+</script>
+
+
 
 <script src="../js/libs/jquery-1.10.2.js"></script> 
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/handlebars-1.1.2.js"></script> 
 <script src="../js/libs/ember-1.3.1.js"></script> 
 <script src="../js/App.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#toggleInfo").click(function(){
+    $("#info").slideToggle("fast");
+  });
+});
+</script>
 </body>
 </html>

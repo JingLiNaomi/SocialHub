@@ -28,8 +28,9 @@
 
 .publishComment
 {
+	margin-left:-8px;
     text-align: right;
-    width: 100%;
+    width: 102%;
     display: none;
 }
 
@@ -57,40 +58,20 @@
 
 .postHolder
 {
-    padding: 5px;
-    border-bottom: solid 1px #E6E6E6;
     margin: 5px;
-   list-style:none;
 }
-
-    .postHolder p
-    {
-        margin: 4px auto 7px 50px;
-    }
-
-    .postHolder a
-    {
-        font-weight: bold;
-    }
 
 .postFooter
 {
     font-size: 0.85em;
-    margin-left: 55px;
+	color: #7D7D84;
 }
 
-    .postFooter span
-    {
-        color: #7D7D84;
-    }
 
-    .postFooter a
-    {
-        font-weight: normal;
-    }
 
 .commentHolder
 {
+	margin-left:-40px;
     background-color: #EEF1F6;
     padding: 5px;
     border-bottom: 1px solid #DEE5EA;
@@ -99,10 +80,19 @@
 }
 
 
-
+.post-profile
+{
+	margin-left:50px;
+	}
 
 .img-small
 {
 	width:50px;
 	height:50px;
+}
+
+.img-medium
+{
+	width:100px;
+	height:100px;
 }

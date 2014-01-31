@@ -1,0 +1,56 @@
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery/jquery.js"></script>
+<script src="../js/bootstrap/bootstrap.js"/></script>
+<!-- My News -->
+
+<div class="row">
+  <ul class="list-unstyled">
+    <!-- Upload Photo News -->
+    <li>
+      <div class="row">
+        <div class="col-md-1"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small post-profile"> </div>
+        <div class="col-md-4"> 
+          <!-- Row 1 -->
+          <div class="row"> <a>{Username}</a> uploaded new photos </div>
+          <!-- Row 2 Photos -->
+          <div class="row"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-medium"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-medium"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-medium"> </div>
+          <!-- Row 3 Date Time -->
+          <div class="postFooter" style="margin-left:-14px"><span>{posted date time}</span></div>
+          <!-- Comment Section -->
+          <div class="row">
+            <div class="commentSection">
+              <div style="display: block">
+                <ul>
+                  <li class="commentHolder">
+                    <table>
+                      <tr> 
+                        <!-- Comment Profile Image -->
+                        <td rowspan="2"><img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"></td>
+                        <!-- Comment Text -->
+                        <td><a>{commenter name}</a>: <span>{comment}</span></td>
+                      </tr>
+                      <tr>
+                        <td class="postFooter"><span>{commented date time}</span></td>
+                      </tr>
+                    </table>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: block" class="publishComment">
+                <textarea class="commentTextArea" placeholder="write a comment..."></textarea>
+                <input type="button"  value="Comment" class="btn btn-primary"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- New Status News -->
+    <li> <a href="../MyAlbums">Albums</a> </li>
+    <!-- Friendship News -->
+    <li> <a href="../MyBlog">Blog</a> </li>
+    <!-- New Blog Ariticle News -->
+    <li> <a href="../MyBlog">Blog</a> </li>
+  </ul>
+</div>
+<link href="../css/post.css" rel="stylesheet" type="text/css" />

@@ -222,22 +222,35 @@
         <li class="postHolder"> 
           <!-- Status Section -->
           <div class="row">
-            <div class="col-md-1"> <img src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"> </div>
-            <div style="margin-left:30px">
-              <p><a>{full name}</a>: <span>{status text}</span></p>
-              <div class="postFooter"> <span class="timeago">{posted date time}</span></div>
+            <table style="margin-left:10px">
+            <tr>
+            <td rowspan="2">
+             <img src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"> </div></td>
+            <td>
+              <a>{full name}</a>: <span>{status text}</span></td>
+              </tr>
+              <tr>
+              <td class="postFooter"> <span>{posted date time}</span></td>
+            </tr></table>
             </div>
+			</div>
+			<div class="row">
+			 <!-- Comment Section -->
             <div class="commentSection">
             <div style="display: block">
               <ul>
                 <li class="commentHolder">
-                  <div class="row" style="margin-left:-45px">
-                    <div class="col-md-1"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"></div>
-                    <div style="margin-left:30px">
-                      <p><a>{commenter name}</a>: <span>{comment}</span></p>
-                      <div class="postFooter"> <span class="timeago">{commented date time}</span></div>
-                    </div>
-                  </div>
+                  <table>
+                      <tr> 
+                        <!-- Comment Profile Image -->
+                        <td rowspan="2"><img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"></td>
+                        <!-- Comment Text -->
+                        <td><a>{commenter name}</a>: <span>{comment}</span></td>
+                      </tr>
+                      <tr>
+                        <td class="postFooter"><span>{commented date time}</span></td>
+                      </tr>
+                    </table>
                 </li>
               </ul>
               </div>

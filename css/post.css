@@ -1,0 +1,108 @@
+/* CSS Document */
+
+.msgTextArea
+{
+    width: 97%;
+    height: 80px;
+}
+
+
+.commentTextArea
+{
+    width: 98%;
+    height: 40px;
+}
+
+.publishContainer
+{
+    display:block;
+    text-align: right;
+     background-color: #EEF1F6;
+    border-color: white;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1em 1.2em ;
+    margin-bottom:2em;
+}
+
+.publishComment
+{
+    text-align: right;
+    width: 100%;
+    display: none;
+}
+
+#msgHolder
+{
+    width: 65%;
+}
+
+    #msgHolder img
+    {
+        float: left;
+        margin-right: 7px;
+    }
+
+    #msgHolder a
+    {
+        text-decoration: none;
+        color: #015BA7;
+    }
+
+        #msgHolder a:hover
+        {
+            text-decoration: underline;
+        }
+
+.postHolder
+{
+    padding: 5px;
+    border-bottom: solid 1px #E6E6E6;
+    margin: 5px;
+   list-style:none;
+}
+
+    .postHolder p
+    {
+        margin: 4px auto 7px 50px;
+    }
+
+    .postHolder a
+    {
+        font-weight: bold;
+    }
+
+.postFooter
+{
+    font-size: 0.85em;
+    margin-left: 55px;
+}
+
+    .postFooter span
+    {
+        color: #7D7D84;
+    }
+
+    .postFooter a
+    {
+        font-weight: normal;
+    }
+
+.commentHolder
+{
+    background-color: #EEF1F6;
+    padding: 5px;
+    border-bottom: 1px solid #DEE5EA;
+    border-top: 1px solid white;
+    list-style:none;
+}
+
+
+
+
+.img-small
+{
+	width:50px;
+	height:50px;
+}

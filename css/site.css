@@ -85,3 +85,43 @@ hr
 	max-height:100%;
 	max-width:100%;
 }
+
+.circle-row
+{
+	height: 125px;
+	margin-top: 19px;
+}
+
+.circle-block
+{
+	height:160px;
+	background-image:url(../test%20images/circle.png);
+	back
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.circle-half-row-top
+{
+	padding-top: 27px;
+	padding-bottom: 3px; 
+}
+
+.circle-half-row-bottom
+{
+	padding-bottom: 28px;
+	padding-top:2px;
+}
+
+.circle-img
+{
+	margin: 0 auto;
+	width: 45%;
+	heigth: 50px;
+}
+
+.circle-name
+{
+	height: 100px;
+	padding-top: 10px;
+}

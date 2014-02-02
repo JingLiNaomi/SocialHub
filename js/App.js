@@ -7,5 +7,6 @@ App.Router.map(function() {
 	this.resource('mymessages');
 	this.resource('myprofile');
 	this.resource('myalbums');
+	this.resource('mycircles');
 });
 	

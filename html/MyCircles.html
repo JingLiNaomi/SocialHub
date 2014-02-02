@@ -1,61 +1,60 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="../css/site.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-<div class="col-md-9"> 
-  <!-- My Circles pane-->
-  <div class="col-md-5">
-    <div class="row"> </div>
-  </div>
-  
-  <!-- Shared Circles pane -->
-  <div class="col-md-4"> </div>
-</div>
-<svg>
-<clipPath id="cut-off-bottom1">
-  <circle cx="30" cy="30" r="30" />
-</clipPath>
-<clipPath id="cut-off-bottom2">
-  <circle cx="90" cy="30" r="30" />
-</clipPath>
-<clipPath id="cut-off-bottom3">
-  <circle cx="30" cy="90" r="30" />
-</clipPath>
-<clipPath id="cut-off-bottom4">
-  <circle cx="90" cy="90" r="30" />
-</clipPath>
-<image x="0" y="0" xlink:href="../test images/TestImg1.jpg" height="60" width="60" clip-path="url(#cut-off-bottom1)" ></image>
-<image x="60" y="0" xlink:href="../test images/TestImg2.jpg" height="60" width="60" clip-path="url(#cut-off-bottom2)" ></image>
-<image x="0" y="60" xlink:href="../test images/TestImg3.jpg" height="60" width="60" clip-path="url(#cut-off-bottom3)" ></image>
-<image x="60" y="60" xlink:href="../test images/TestImg1.jpg" height="60" width="60" clip-path="url(#cut-off-bottom4)" ></image>
-</svg>
-<div class="col-md-5">
-  <div class="col-sm-5">
-    <div class="circle-row">
-      <div class="circle-half-row">
-      	<div style="width:125px; margin:0 auto;">
-      		<img src="../test images/TestImg1.jpg" class="img-auto-size img-circle" />
-        	<img src="../test images/TestImg1.jpg" class="img-auto-size img-circle" />
+<script type="text/x-handlebars" id="mycircles">
+  <hr />
+  <div class="row content friend-list-row">
+    <div class="col-md-2"> <img src="../test images/circle.png" class="img-auto-size img-circle" /> </div>
+    <div class="col-md-5 circle-name">
+      <div> <h3> Circle name </h3> </div>
+    </div>
+    <div class="col-md-1 friend-btns">
+      <div class="row friend-btns">
+        <div class="col-md-1">
+          <button type="button" class="btns btn btn-primary btn-sm">Message</button>
         </div>
       </div>
-      <div class="circle-half-row">
-      	<img src="../test images/TestImg1.jpg" class="img-auto-size img-circle" />
-        <img src="../test images/TestImg1.jpg" class="img-auto-size img-circle" />
+      <div class="row friend-btns">
+        <div class="col-md-1">
+          <button type="button" class="btns btn btn-danger btn-sm">Delete</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-5">
-    <div class="circle-row">
-      <div class="circle-half-row"> </div>
-      <div class="circle-half-row"> </div>
+  <hr />
+  <div class="row content friend-list-row">
+    <div class="col-md-2"> <img src="../test images/circle.png" class="img-auto-size img-circle" /> </div>
+    <div class="col-md-5 circle-name">
+      <h3> Circle name </h3>
+    </div>
+    <div class="col-md-1 friend-btns">
+      <div class="row friend-btns">
+        <div class="col-md-1">
+          <button type="button" class="btns btn btn-primary btn-sm">Message</button>
+        </div>
+      </div>
+      <div class="row friend-btns">
+        <div class="col-md-1">
+          <button type="button" class="btns btn btn-danger btn-sm">Delete</button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</body>
-</html>
+  <hr />
+  <div class="row content friend-list-row">
+    <div class="col-md-2"> <img src="../test images/circle.png" class="img-auto-size img-circle" /> </div>
+    <div class="col-md-5 circle-name">
+      <h3> Circle name </h3>
+    </div>
+    <div class="col-md-1 friend-btns">
+      <div class="row friend-btns">
+        <div class="col-md-1">
+          <button type="button" class="btns btn btn-primary btn-sm">Message</button>
+        </div>
+      </div>
+      <div class="row friend-btns">
+        <div class="col-md-1">
+          <button type="button" class="btns btn btn-danger btn-sm">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+</script>

@@ -77,8 +77,8 @@
 <script type="text/x-handlebars" id="myalbums">
 <hr />
       <form role="form">
-        <div class=row>
-          <a href="#" class="topopup"><h2>Create new album</h2></a>
+        <div class="row">
+          <div id="topopup" onclick="topopupClicked();"><h2>Create new album</h2></div>
           <hr>
         </div>
         <div class="row">
@@ -124,12 +124,12 @@
       </form>
     <hr />
 	<div id="toPopup">
-  <div class="close"></div>
+  <div class="close" onclick="crossClicked();"></div>
   <div id="popup_content" align="center"> <!--your content start-->
     <row>
       <div class="col-md-1"> </div>
       <div class="col-md-9"> <h4>Creating New Album</h4> </div>
-      <div class="col-md-2"> <a href="#" class="clickcross"><img style="margin-left:20px" src="img/cross.png"/></a> </div>
+      <div class="col-md-2"> <img id="clickcross" style="margin-left:20px" src="img/cross.png" onclick="crossClicked();"></div>
     </row>
     <row>
       <form class="form-inline" role="form">
@@ -147,7 +147,7 @@
   <!--your content end--> </div>
 <!--toPopup end-->
 <div class="loader"></div>
-<div id="backgroundPopup"></div>
+<div id="backgroundPopup" onclick="crossClicked();"></div>
 </script>
 
 

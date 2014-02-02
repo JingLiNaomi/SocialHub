@@ -13,15 +13,6 @@ return false;
 crossClicked = function() {
 	disablePopup();
 }
-
-
- /************** start: functions. **************/ 
-loading = function() { 
- $("div.loader").show(); 
- } 
-closeloading = function () { 
- $("div.loader").fadeOut('normal'); 
- } 
  
  var popupStatus = 0; // set value 
  loadPopup = function(){ 
@@ -29,7 +20,7 @@ closeloading = function () {
  //closeloading(); // fadeout loading 
  $("#toPopup").fadeIn(500); // fadein popup div 
  $("#backgroundPopup").css("opacity", "0.7"); // css opacity, supports IE7, IE8 
- $("#backgroundPopup").fadeIn(0001); 
+ $("#backgroundPopup").fadeIn(1); 
  popupStatus = 1; // and set value to 1 
  } 
  } 

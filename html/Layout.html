@@ -39,24 +39,31 @@
         </li>
         
         <!-- Sign Out -->
-        <li> <a href="../signout">Sign out</a> </li>
+        <li> {{#link-to 'login'}}Sign out{{/link-to}}</li>
       </ul>
     </div>
   </div>
 </div>
+{{outlet}}
+<!-- Footer -->
+<footer>
+    <p>&copy; 2014 - SocialHub</p>
+</footer>
+</script>
 
+<script type="text/x-handlebars" id="main">
 <!-- Content -->
 <div class="container body-content" style="margin-top:60px">
   <div class="row">
     <!-- Nav Tabs -->
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#myprofile">My profile</a></li>
-        <li><a href="#myfriends">My friends</a></li>
-        <li><a href="#myalbums">My albums</a></li>
-        <li><a href="#mymessages">My messages</a></li>
-        <li><a href="#">My news</a></li>
-        <li><a href="#mycircles">My circles</a></li>
+        <li class="active">{{#link-to 'myprofile'}} Profile {{/link-to}}</li>
+        <li>{{#link-to 'myfriends'}}Friends{{/link-to}}</li>
+        <li>{{#link-to 'mymessages'}}Messages{{/link-to}}</li>
+        <li>{{#link-to 'myalbums'}}Albums{{/link-to}}</li>
+        <li>{{#link-to 'myprofile'}}My news{{/link-to}}</li>
+        <li>{{#link-to 'mycircles'}}Circles{{/link-to}}</li>
         <li><a href="#">My blogs</a></li>
         <li><a href="#">My settings</a></li>
       </ul>
@@ -67,12 +74,54 @@
 	</div>
   </div>
   <hr />
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2014 - SocialHub</p>
-  </footer>
 </div>
 </script> 
+
+<script type="text/x-handlebars" id="login">
+<div class="container body-content" style="margin-top:60px">
+  <div class="row"> 
+    <!-- Nav Tabs -->
+    <div class="col-md-3"> 
+      <!-- Form for Login -->
+      <form role="form">
+        <div class="form-group"> 
+          <!-- Email input textbox-->
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group"> 
+          <!--Password input textbox-->
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="button" class="btn btn-primary">Login</button>
+        <span class="help-block"><a href="#">Forgot password</a></span>
+      </form>
+    </div>
+    <!-- Body -->
+    <div class="col-md-3"> </div>
+    <div class="col-md-3">
+      <!-- Registration Form-->
+      <form role="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword2">Re-enter Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+        </div>
+        <button type="button" class="btn btn-primary">Register</button>
+      </form>
+    </div>
+    <div class="col-md-3"> </div>
+  </div>
+  <hr />
+</script>
 
 <script type="text/x-handlebars" id="myalbums">
 <hr />
@@ -144,7 +193,8 @@
       <button type="button" class="btn btn-primary btn-sm">OK</button>
     </row>
   </div>
-  <!--your content end--> </div>
+  <!--your content end--> 
+  </div>
 <!--toPopup end-->
 <div class="loader"></div>
 <div id="backgroundPopup" onclick="crossClicked();"></div>
@@ -407,9 +457,6 @@
 </div>
 <link href="../css/post.css" rel="stylesheet" type="text/css" />
 </script>
-
-
-
 <script src="../js/libs/jquery-1.10.2.js"></script>
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/script.js"></script> 

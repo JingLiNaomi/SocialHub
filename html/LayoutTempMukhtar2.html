@@ -7,8 +7,7 @@
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="../css/site.css" rel="stylesheet" type="text/css" />
 <link href="../css/stylemukhtar.css" rel="stylesheet" type="text/css" />
-<link href="../css/bootstrap-combined.min.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.min.css" />
+
 
 </head>
 <body>
@@ -680,7 +679,7 @@
   <div class="tab-content">
     <div class="tab-pane container active" id="personalInfo">
 	<br>
-    <div class="col-md-1">
+    <div class="col-md-3">
 	</div>
 	<div class="col-md-4">
 	<form role="form">
@@ -735,12 +734,7 @@
   </div>
   <div class="form-group">
     <label for="dateOfBirth">Your Date Of Birth:</label>
-    <div class="well">
-      <div id="datetimepicker4" class="input-append">
-        <input data-format="yyyy-MM-dd" type="text">
-        </input>
-        <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"> </i> </span> </div>
-    </div>
+    <input type="date" name="bday">
   </div>
   <div class="form-group">
     <label for="occupation">Your Occupation</label>
@@ -749,68 +743,58 @@
   <button type="button" class="btn btn-primary">Save</button>
 </form>
 </div>
-<div class="col-md-7">
+<div class="col-md-5">
 </div>
     
     </div>
     <div class="tab-pane container" id="privacy"> 
+	<br>
       <!-- Privacy Section -->
-      
-      <form class="form-horizontal" role="form">
+      <div class="col-md-3">
+	  </div>
+      <form class="form col-md-4" role="form">
         <div class="form-group">
-          <label for="viewProfile" class="col-md-3 control-label">Who can view profile</label>
-          <div class="col-md-6">
-            <select name="viewProfile" class="dropdown">
+          <label for="viewProfile" class="control-label">Who can view profile</label>
+            <select name="viewProfile" class="form-control">
               <option value="public">Public</option>
               <option value="friendonly">Friend only</option>
               <option value="private">Private</option>
             </select>
-          </div>
         </div>
         <div class="form-group">
-          <label for="sendMsg" class="col-md-3 control-label">Who can send message</label>
-          <div class="col-md-6">
-            <select name="sendMsg" class="dropdown">
+          <label for="sendMsg" class="control-label">Who can send message</label>
+            <select name="sendMsg" class="form-control">
               <option value="public">Public</option>
               <option value="friendonly">Friend only</option>
               <option value="private">Private</option>
             </select>
-          </div>
         </div>
         <div class="form-group">
-          <label for="viewBlog" class="col-md-3 control-label">Who can view blog</label>
-          <div class="col-md-6">
-            <select name="viewBlog" class="dropdown">
+          <label for="viewBlog" class="control-label">Who can view blog</label>
+            <select name="viewBlog" class="form-control">
               <option value="public">Public</option>
               <option value="friendonly">Friend only</option>
               <option value="private">Private</option>
             </select>
-          </div>
         </div>
         <div class="form-group">
-          <label for="viewAlbum" class="col-md-3 control-label">Who can view albums</label>
-          <div class="col-md-6">
-            <select name="viewAlbum" class="dropdown">
+          <label for="viewAlbum" class="control-label">Who can view albums</label>
+            <select name="viewAlbum" class="form-control">
               <option value="public">Public</option>
               <option value="friendonly">Friend only</option>
               <option value="private">Private</option>
             </select>
-          </div>
         </div>
         <div class="form-group">
-          <label for="viewFriend" class="col-md-3 control-label">Who can view friend list</label>
-          <div class="col-md-6">
-            <select name="viewFriend" class="dropdown">
+          <label for="viewFriend" class="control-label">Who can view friend list</label>
+            <select name="viewFriend" class="form-control">
               <option value="public">Public</option>
               <option value="friendonly">Friend only</option>
               <option value="private">Private</option>
             </select>
-          </div>
         </div>
         <div class="form-group">
-          <div class="col-md-offset-3 col-md-6">
             <button type="Button" class="btn btn-primary">Save</button>
-          </div>
         </div>
       </form>
     </div>

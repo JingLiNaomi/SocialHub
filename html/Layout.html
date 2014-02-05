@@ -68,7 +68,7 @@
         <li class="tab" id="mynewsTab" onclick="return activate('mynewsTab');">{{#link-to 'mynews'}}My news{{/link-to}}</li>
         <li class="tab" id="mycirclesTab" onclick="return activate('mycirclesTab');">{{#link-to 'mycircles'}}Circles{{/link-to}}</li>
         <li class="tab" id="myblogTab" onclick="return activate('myblogTab');">{{#link-to 'myblog'}}My blog{{/link-to}}</li>
-        <li class="tab" id="mysettingsTab" onclick="return activate('mysettingsTab');"><a href="#">My settings</a></li>
+        <li class="tab" id="mysettingsTab" onclick="return activate('mysettingsTab');">{{#link-to 'mysettings'}}My settings{{/link-to}}</li>
       </ul>
     </div>
     <!-- Body -->
@@ -180,7 +180,7 @@
 		<row>
 		  <div class="col-md-1"> </div>
 		  <div class="col-md-9"> <h4>Creating New Album</h4> </div>
-		  <div class="col-md-2"> <img id="clickcross" style="margin-left:20px" src="img/cross.png" onclick="crossClicked();"></div>
+		  <div class="col-md-2"> <img id="clickcross" style="margin-left:20px; cursor:pointer;"src="../img/cross.png" onclick="crossClicked();"></div>
 		</row>
 		<row>
 		  <form class="form-inline" role="form">
@@ -711,6 +711,143 @@
     		<button type="button" class="btn btn-info">Send</button>
     	</div>
     </div>
+</script>
+
+<script type="text/x-handlebars" id="mysettings">
+<div class="row">
+  <h2 class="text-center">Settings</h2>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#personalInfo" data-toggle="tab">Personal info</a></li>
+    <li><a href="#privacy" data-toggle="tab">Privacy</a></li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="personalInfo">
+	<br>
+    <div class="col-md-3">
+	</div>
+	<div class="col-md-4">
+	<form role="form">
+  <div class="form-group">
+    <label for="firstNameInput">Your First Name:</label>
+    <input type="text" class="form-control" id="firstNameInput">
+  </div>
+  <div class="form-group">
+    <label for="surnameInput">Your Surname:</label>
+    <input type="text" class="form-control" id="surnameInput">
+  </div>
+  <div class="form-group">
+    <label for="schoolInput">Your School:</label>
+    <input type="text" class="form-control" id="schoolInput" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="countryInput">Your Country:</label>
+    <select class="form-control">
+      <option>China</option>
+      <option>Kazakhstan</option>
+      <option>United Kingdoms</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="cityInput">Your Country:</label>
+    <select class="form-control">
+      <option>Astana</option>
+      <option>Beijing</option>
+      <option>London</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="genderInput">Your Gender:</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="gender1" value="isMale" checked>
+        Male </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="gender2" value="isFemale">
+        Female </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="relationshipInput">Relationship Status:</label>
+    <select class="form-control">
+      <option>Single</option>
+      <option>In Relationship</option>
+      <option>Married</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="dateOfBirth">Your Date Of Birth:</label>
+    <input type="date" name="bday">
+  </div>
+  <div class="form-group">
+    <label for="occupation">Your Occupation</label>
+    <input type="text" class="form-control" id="occupation" placeholder="">
+  </div>
+  <button type="button" class="btn btn-primary">Save</button>
+</form>
+</div>
+<div class="col-md-5">
+</div>
+    
+    </div>
+    <div class="tab-pane container" id="privacy"> 
+	<br>
+      <!-- Privacy Section -->
+      <div class="col-md-3">
+	  </div>
+      <form class="form col-md-4" role="form">
+        <div class="form-group">
+          <label for="viewProfile" class="control-label">Who can view profile</label>
+            <select name="viewProfile" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="sendMsg" class="control-label">Who can send message</label>
+            <select name="sendMsg" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewBlog" class="control-label">Who can view blog</label>
+            <select name="viewBlog" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewAlbum" class="control-label">Who can view albums</label>
+            <select name="viewAlbum" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewFriend" class="control-label">Who can view friend list</label>
+            <select name="viewFriend" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="Button" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 </script>
 
 <script src="../js/libs/jquery-1.10.2.js"></script> 

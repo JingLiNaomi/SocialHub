@@ -2,6 +2,7 @@
 <script src="../js/jquery/jquery.js"></script>
 <script src="../js/bootstrap/bootstrap.js"/></script>
 <!-- My Settings -->
+<<<<<<< HEAD
 <div class="row"> 
 <h2 class="text-center">Settings</h2>
 <!-- Nav tabs -->
@@ -82,4 +83,85 @@
       </form>
   </div>
 </div>
+=======
+<div class="row">
+  <h2 class="text-center">Settings</h2>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#personalInfo" data-toggle="tab">Personal info</a></li>
+    <li><a href="#privacy" data-toggle="tab">Privacy</a></li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="personalInfo">personalInfo</div>
+    <div class="tab-pane container" id="privacy"> 
+      <!-- Privacy Section -->
+      
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="viewProfile" class="col-md-3 control-label">Who can view profile</label>
+          <div class="col-md-6">
+            <select name="viewProfile" class="dropdown">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sendMsg" class="col-md-3 control-label">Who can send message</label>
+          <div class="col-md-6">
+            <select name="sendMsg" class="dropdown">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="viewBlog" class="col-md-3 control-label">Who can view blog</label>
+          <div class="col-md-6">
+            <select name="viewBlog" class="dropdown">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="viewAlbum" class="col-md-3 control-label">Who can view albums</label>
+          <div class="col-md-6">
+            <select name="viewAlbum" class="dropdown">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="viewFriend" class="col-md-3 control-label">Who can view friend list</label>
+          <div class="col-md-6">
+            <select name="viewFriend" class="dropdown">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-3 col-md-6">
+            <button type="Button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+>>>>>>> 2517e96750440277266f167ab5007c2d4855d177
 </div>
+<style>
+.dropdown
+{
+	margin-top:10px;
+	}
+</style>

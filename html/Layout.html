@@ -7,6 +7,7 @@
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="../css/site.css" rel="stylesheet" type="text/css" />
 <link href="../css/stylemukhtar.css" rel="stylesheet" type="text/css" />
+<link href="../css/post.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <script type="text/x-handlebars">
@@ -67,7 +68,7 @@
         <li class="tab" id="mynewsTab" onclick="return activate('mynewsTab');">{{#link-to 'mynews'}}My news{{/link-to}}</li>
         <li class="tab" id="mycirclesTab" onclick="return activate('mycirclesTab');">{{#link-to 'mycircles'}}Circles{{/link-to}}</li>
         <li class="tab" id="myblogTab" onclick="return activate('myblogTab');">{{#link-to 'myblog'}}My blog{{/link-to}}</li>
-        <li class="tab" onclick="return activate();"><a href="#">My settings</a></li>
+        <li class="tab" id="mysettingsTab" onclick="return activate('mysettingsTab');"><a href="#">My settings</a></li>
       </ul>
     </div>
     <!-- Body -->
@@ -450,7 +451,7 @@
       </ul>
     </div>
   </div>
-<link href="../css/post.css" rel="stylesheet" type="text/css" />
+
 </script> 
 <script type="text/x-handlebars" id="mynews">
 <!-- My News -->
@@ -657,8 +658,61 @@
     </li>
   </ul>
 </div>
-<link href="../css/post.css" rel="stylesheet" type="text/css" />
-</script> 
+</script>
+
+<script type="text/x-handlebars" id="messaging">
+<!-- Row for photo, name and date -->
+    <div class="row">
+    	<!-- Photo section -->
+		<div class="col-md-1">
+        	<div style="margin-top: 10px; margin-left: auto">
+            	<img class="img-msg img-rounded" src="../test images/TestImg1.jpg" />
+            </div>
+        </div>
+        <!-- Name section -->
+        <div class="col-md-10">
+        <div style="margin-top:30px">
+        <b>Name of person:</b>
+        </div>
+        </div>
+        <!-- Date section -->
+        <div class="col-md-1">
+        <div style="margin-top:30px">
+        <i>05.02.2014 15:23</i>
+        </div>
+        </div>
+    </div>
+    <!-- Row for message -->
+    <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+    </div>
+    <hr />
+    <!-- Controller -->
+    <div class="row">
+    	<div class="col-md-1">
+        	<div style="margin-top: 10px; margin-left: auto">
+            	<img class="img-msg img-rounded" src="../test images/TestImg1.jpg" />
+            </div>
+        </div>
+        <div class="col-md-11">
+        	<textarea class="form-control" rows="3" placeholder="Enter you message here..."></textarea>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-md-1">
+        </div>
+        <div class="col-md-11">
+    		<button type="button" class="btn btn-info">Send</button>
+    	</div>
+    </div>
+</script>
+
 <script src="../js/libs/jquery-1.10.2.js"></script> 
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/script.js"></script> 

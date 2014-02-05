@@ -1,0 +1,54 @@
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery/jquery.js"></script>
+<script src="../js/bootstrap/bootstrap.js"/></script>
+<!-- Ariticle -->
+<div class="row"> 
+  <!-- Ariticle Heading -->
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">{Title}</h2>
+      <p class="postFooter text-center">posted on {post date}</p>
+    </div>
+  </div>
+  <hr>
+  <!-- Ariticle Body -->
+  <div class="row">
+    <div class="col-md-8"> {article text:Jack Monroe, the single mother blogging at A Girl Called Jack, has become an activist and voice on poverty in England. The New York Times profiled her in mid-January, while her cookbook of recipes on a budget is released on February 27. Jack’s story is inspiring, and we’re watching to see what she does next.
+      
+      Jason Edward Harrington, blogger at Taking Sense Away and former TSA screener, shares stories and observations about his many years of employment at the Transportation Security Administration.} </div>
+    <div class="col-md-1">
+      <input type="button"  value="Edit" class="btn btn-primary btn-post" />
+      <input type="button"  value="Delete" class="btn btn-danger btn-post"/>
+    </div>
+  </div>
+  <hr>
+  <!-- Ariticle Comments -->
+  <div class="row">
+    <div class="commentSection col-md-8">
+      <div style="display: block">
+        <ul>
+          <li class="commentHolder">
+            <table>
+              <tr> 
+                <!-- Comment Profile Image -->
+                <td rowspan="2"><img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"></td>
+                <!-- Comment Text -->
+                <td><a>{commenter name}</a>: <span>{comment}</span></td>
+              </tr>
+              <tr>
+                <td class="postFooter"><span>{commented date time}</span></td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+      </div>
+      <div style="display: block" class="publishComment">
+        <textarea class="commentTextArea" placeholder="write a comment..."></textarea>
+        <input type="button"  value="Comment" class="btn btn-primary btn-post"/>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<link href="../css/post.css" rel="stylesheet" type="text/css" />

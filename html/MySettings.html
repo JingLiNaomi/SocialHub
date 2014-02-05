@@ -2,17 +2,153 @@
 <script src="../js/jquery/jquery.js"></script>
 <script src="../js/bootstrap/bootstrap.js"/></script>
 <!-- My Settings -->
-<div class="row"> 
-<h2 class="text-center">Settings</h2>
-<!-- Nav tabs -->
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#personalInfo" data-toggle="tab">Personal info</a></li>
-  <li><a href="#privacy" data-toggle="tab">Privacy</a></li>
-</ul>
+<div class="row">
+  <h2 class="text-center">Settings</h2>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#personalInfo" data-toggle="tab">Personal info</a></li>
+    <li><a href="#privacy" data-toggle="tab">Privacy</a></li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="personalInfo">
+    
+<form role="form">
+  <div class="form-group">
+    <label for="firstNameInput">Your First Name:</label>
+    <input type="text" class="form-control" id="firstNameInput">
+  </div>
+  <div class="form-group">
+    <label for="surnameInput">Your Surname:</label>
+    <input type="text" class="form-control" id="surnameInput">
+  </div>
+  <div class="form-group">
+    <label for="schoolInput">Your School:</label>
+    <input type="text" class="form-control" id="schoolInput" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="countryInput">Your Country:</label>
+    <select class="form-control">
+      <option>China</option>
+      <option>Kazakhstan</option>
+      <option>United Kingdoms</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="cityInput">Your Country:</label>
+    <select class="form-control">
+      <option>Astana</option>
+      <option>Beijing</option>
+      <option>London</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="genderInput">Your Gender:</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="gender1" value="isMale" checked>
+        Male </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="gender2" value="isFemale">
+        Female </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="relationshipInput">Relationship Status:</label>
+    <select class="form-control">
+      <option>Single</option>
+      <option>In Relationship</option>
+      <option>Married</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="dateOfBirth">Your Date Of Birth:</label>
+    <div class="well">
+      <div id="datetimepicker4" class="input-append">
+        <input data-format="yyyy-MM-dd" type="text">
+        </input>
+        <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"> </i> </span> </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="occupation">Your Occupation</label>
+    <input type="text" class="form-control" id="occupation" placeholder="">
+  </div>
+  <button type="button" class="btn btn-primary">Save</button>
+</form>
+    
+    </div>
+    <div class="tab-pane container" id="privacy"> 
+      <!-- Privacy Section -->
+      
+      <form class="form col-md-4" role="form">
+        <div class="form-group">
+          <label for="viewProfile" class="control-label">Who can view profile</label>
+            <select name="viewProfile" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="sendMsg" class="control-label">Who can send message</label>
+            <select name="sendMsg" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewBlog" class="control-label">Who can view blog</label>
+            <select name="viewBlog" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewAlbum" class="control-label">Who can view albums</label>
+            <select name="viewAlbum" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewFriend" class="control-label">Who can view friend list</label>
+            <select name="viewFriend" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="Button" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<style>
+.dropdown
+{
+	margin-top:10px;
+	}
+</style>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="personalInfo">personalInfo</div>
-  <div class="tab-pane" id="privacy">privacy</div>
-</div>
-</div>
+<script type="text/javascript">
+	$(function() {
+		$('#datetimepicker4').datetimepicker({
+			pickTime: false
+		});
+	});
+	</script> 
+    <script type="text/javascript"
+	src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+	</script> 
+<script type="text/javascript"
+  	src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.en-UK.js">
+  	</script> 

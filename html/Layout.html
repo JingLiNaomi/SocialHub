@@ -7,10 +7,12 @@
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="../css/site.css" rel="stylesheet" type="text/css" />
 <link href="../css/stylemukhtar.css" rel="stylesheet" type="text/css" />
+<link href="../css/post.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <script type="text/x-handlebars">
 <!-- Header -->
+<div id="backgroundPopup" onclick="crossClicked();"></div>
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header"> <a href="" class="navbar-brand">SocialHub</a>
@@ -44,6 +46,7 @@
   </div>
 </div>
 {{outlet}}
+
 <!-- Footer -->
 <footer>
     <p>&copy; 2014 - SocialHub</p>
@@ -53,6 +56,8 @@
 <!-- Content -->
 <div class="container body-content" style="margin-top:60px">
   <div class="row">
+  <div id="toPopup" style="max-width:100%; width:inherit">
+		</div>
     <!-- Nav Tabs -->
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked">
@@ -63,14 +68,14 @@
         <li class="tab" id="mynewsTab" onclick="return activate('mynewsTab');">{{#link-to 'mynews'}}My news{{/link-to}}</li>
         <li class="tab" id="mycirclesTab" onclick="return activate('mycirclesTab');">{{#link-to 'mycircles'}}Circles{{/link-to}}</li>
         <li class="tab" id="myblogTab" onclick="return activate('myblogTab');">{{#link-to 'myblog'}}My blog{{/link-to}}</li>
-        <li class="tab" id="mysettingsTab" onclick="return activate('mysettingsTab');"><a href="#">My settings</a></li>
+        <li class="tab" id="mysettingsTab" onclick="return activate('mysettingsTab');">{{#link-to 'mysettings'}}My settings{{/link-to}}</li>
       </ul>
     </div>
     <!-- Body -->
     <div class="col-md-9">
   
 	  {{outlet}}
-
+		
 	</div>
   </div>
   <hr />
@@ -123,11 +128,10 @@
 </script> 
 <script type="text/x-handlebars" id="myalbums">
 <div class="tab-pane" id="myalbums">
-
 <hr />
       <form role="form">
         <div class="row">
-          <div id="topopup" onclick="topopupClicked();"><h2>Create new album</h2></div>
+          <div id="topopup" onclick="topopupClicked('popup_content');"><h2>Create new album</h2></div>
           <hr>
         </div>
         <div class="row">
@@ -172,39 +176,29 @@
         </div>
       </form>
     <hr />
-	<div id="toPopup">
-  <div class="close" onclick="crossClicked();"></div>
-  <div id="popup_content" align="center"> <!--your content start-->
-    <row>
-      <div class="col-md-1"> </div>
-      <div class="col-md-9"> <h4>Creating New Album</h4> </div>
-      <div class="col-md-2"> <img id="clickcross" style="margin-left:20px" src="img/cross.png" onclick="crossClicked();"></div>
-    </row>
-    <row>
-      <form class="form-inline" role="form">
-        <div class="form-group" align="center">
-          <input type="text" class="form-control col-md-1" id="albumname" placeholder="Album name">
-        </div>
-      </form>
-    </row>
-    <row> <br>
-    </row>
-    <row>
-      <button type="button" class="btn btn-primary btn-sm">OK</button>
-    </row>
-  </div>
+	  <div id="popup_content" align="center" style="display:none;"> <!--your content start-->
+		<row>
+		  <div class="col-md-1"> </div>
+		  <div class="col-md-9"> <h4>Creating New Album</h4> </div>
+		  <div class="col-md-2"> <img id="clickcross" style="margin-left:20px; cursor:pointer;"src="../img/cross.png" onclick="crossClicked();"></div>
+		</row>
+		<row>
+		  <form class="form-inline" role="form">
+			<div class="form-group" align="center">
+			  <input type="text" class="form-control col-md-1" id="albumname" placeholder="Album name">
+			</div>
+		  </form>
+		</row>
+		<row> <br>
+		</row>
+		<row>
+		  <button type="button" class="btn btn-primary btn-sm">OK</button>
+		</row>
+	  </div>
   <!--your content end--> 
-  </div>
 <!--toPopup end-->
-<div class="loader"></div>
-<div id="backgroundPopup" onclick="crossClicked();"></div>
-<<<<<<< HEAD
+
 </div>
-</script>
-
-=======
->>>>>>> f7f6bfb48b12a194bc2fb70c2849cf485985725c
-
 </script> 
 <script type="text/x-handlebars" id="myfriends">
 <hr />
@@ -457,7 +451,7 @@
       </ul>
     </div>
   </div>
-<link href="../css/post.css" rel="stylesheet" type="text/css" />
+
 </script> 
 <script type="text/x-handlebars" id="mynews">
 <!-- My News -->
@@ -664,7 +658,6 @@
     </li>
   </ul>
 </div>
-<link href="../css/post.css" rel="stylesheet" type="text/css" />
 </script>
 
 <script type="text/x-handlebars" id="messaging">
@@ -718,6 +711,143 @@
     		<button type="button" class="btn btn-info">Send</button>
     	</div>
     </div>
+</script>
+
+<script type="text/x-handlebars" id="mysettings">
+<div class="row">
+  <h2 class="text-center">Settings</h2>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#personalInfo" data-toggle="tab">Personal info</a></li>
+    <li><a href="#privacy" data-toggle="tab">Privacy</a></li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="personalInfo">
+	<br>
+    <div class="col-md-3">
+	</div>
+	<div class="col-md-4">
+	<form role="form">
+  <div class="form-group">
+    <label for="firstNameInput">Your First Name:</label>
+    <input type="text" class="form-control" id="firstNameInput">
+  </div>
+  <div class="form-group">
+    <label for="surnameInput">Your Surname:</label>
+    <input type="text" class="form-control" id="surnameInput">
+  </div>
+  <div class="form-group">
+    <label for="schoolInput">Your School:</label>
+    <input type="text" class="form-control" id="schoolInput" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="countryInput">Your Country:</label>
+    <select class="form-control">
+      <option>China</option>
+      <option>Kazakhstan</option>
+      <option>United Kingdoms</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="cityInput">Your Country:</label>
+    <select class="form-control">
+      <option>Astana</option>
+      <option>Beijing</option>
+      <option>London</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="genderInput">Your Gender:</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="gender1" value="isMale" checked>
+        Male </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="gender2" value="isFemale">
+        Female </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="relationshipInput">Relationship Status:</label>
+    <select class="form-control">
+      <option>Single</option>
+      <option>In Relationship</option>
+      <option>Married</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="dateOfBirth">Your Date Of Birth:</label>
+    <input type="date" name="bday">
+  </div>
+  <div class="form-group">
+    <label for="occupation">Your Occupation</label>
+    <input type="text" class="form-control" id="occupation" placeholder="">
+  </div>
+  <button type="button" class="btn btn-primary">Save</button>
+</form>
+</div>
+<div class="col-md-5">
+</div>
+    
+    </div>
+    <div class="tab-pane container" id="privacy"> 
+	<br>
+      <!-- Privacy Section -->
+      <div class="col-md-3">
+	  </div>
+      <form class="form col-md-4" role="form">
+        <div class="form-group">
+          <label for="viewProfile" class="control-label">Who can view profile</label>
+            <select name="viewProfile" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="sendMsg" class="control-label">Who can send message</label>
+            <select name="sendMsg" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewBlog" class="control-label">Who can view blog</label>
+            <select name="viewBlog" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewAlbum" class="control-label">Who can view albums</label>
+            <select name="viewAlbum" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="viewFriend" class="control-label">Who can view friend list</label>
+            <select name="viewFriend" class="form-control">
+              <option value="public">Public</option>
+              <option value="friendonly">Friend only</option>
+              <option value="private">Private</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="Button" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 </script>
 
 <script src="../js/libs/jquery-1.10.2.js"></script> 

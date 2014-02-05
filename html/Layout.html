@@ -62,7 +62,7 @@
         <li class="tab" id="myalbumsTab" onclick="return activate('myalbumsTab');">{{#link-to 'myalbums'}}Albums{{/link-to}}</li>
         <li class="tab" id="mynewsTab" onclick="return activate('mynewsTab');">{{#link-to 'mynews'}}My news{{/link-to}}</li>
         <li class="tab" id="mycirclesTab" onclick="return activate('mycirclesTab');">{{#link-to 'mycircles'}}Circles{{/link-to}}</li>
-        <li class="tab" onclick="return activate();"><a href="#">My blogs</a></li>
+        <li class="tab" id="myblogTab" onclick="return activate('myblogTab');">{{#link-to 'myblog'}}My blog{{/link-to}}</li>
         <li class="tab" onclick="return activate();"><a href="#">My settings</a></li>
       </ul>
     </div>
@@ -614,6 +614,50 @@
 </div>
 <link href="../css/post.css" rel="stylesheet" type="text/css" />
 </script> 
+<script type="text/x-handlebars" id="myblog">
+<!-- My Blog -->
+<div class="row"> 
+  <!-- Blog Heading -->
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="text-center">My Blog</h2>
+    </div>
+    <div class="col-md-3">
+      <input type="button"  value="New article" class="btn btn-success pull-right" style="margin-top:20px"/>
+    </div>
+   
+  </div>
+   <hr>
+  <!-- Blog List -->
+  <ul class="list-unstyled">
+    <li>
+      <div class="row">
+        <div class="col-md-3"> <b>{Ariticle Title}</b> </div>
+        <div class="col-md-3">
+          <p>posted on {date time}</p>
+        </div>
+        <div class="col-md-3">
+          <input type="button"  value="Read" class="btn btn-primary btn-post pull-right"/>
+        </div>
+      </div>
+      <hr>
+    </li>
+    <li>
+      <div class="row">
+        <div class="col-md-3"> <b>{Ariticle Title}</b> </div>
+        <div class="col-md-3">
+          <p>posted on {date time}</p>
+        </div>
+        <div class="col-md-3">
+          <input type="button"  value="Read" class="btn btn-primary btn-post pull-right"/>
+        </div>
+      </div>
+      <hr>
+    </li>
+  </ul>
+</div>
+<link href="../css/post.css" rel="stylesheet" type="text/css" />
+</script>
 <script src="../js/libs/jquery-1.10.2.js"></script> 
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/script.js"></script> 

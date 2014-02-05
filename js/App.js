@@ -11,6 +11,7 @@ App.Router.map(function() {
 		this.resource('myalbums');
 		this.resource('mycircles');
 		this.resource('mynews');
+		this.resource('myblog');
 	});
 });
 

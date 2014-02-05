@@ -64,6 +64,11 @@ hr
 	width: 130px;
 }
 
+.img-msg
+{
+	max-width: 100%;
+}
+
 .img-div
 {
 	position:relative;

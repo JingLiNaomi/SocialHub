@@ -1,6 +1,7 @@
 
- topopupClicked = function() {
+ topopupClicked = function(id) {
 //loading();
+addPopup(id);
 setTimeout(function(){
 loadPopup();
 },500);

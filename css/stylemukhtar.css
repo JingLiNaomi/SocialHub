@@ -10,17 +10,13 @@
 }
 #toPopup {
 	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-	background: none repeat scroll 0 0 #FFFFFF;
-	border: 10px solid #336699;
 	border-radius: 3px 3px 3px 3px;
 	color: #333333;
 	display: none;
 	font-size: 14px;
-	left: 50%;
-	margin-left: -402px;
-	position: fixed;
-	top: 20%;
-	width: 400px;
+	position:relative;
+	top:0;
+	left:0;
 	z-index: 2;
 }
 div.loader {
@@ -69,6 +65,11 @@ span.arrow {
 	top: 3px;
 	width: 1px;
 }
-div#popup_content {
-	margin: 4px 7px; /* remove this comment if you want scroll bar overflow-y:scroll; height:200px */
+#popup_content {
+	background: none repeat scroll 0 0 #FFFFFF;
+	margin:0 auto; /* remove this comment if you want scroll bar overflow-y:scroll; height:200px */
+	position: relative;
+	top: 20%;
+	width: 400px;
+	
 }

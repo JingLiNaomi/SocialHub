@@ -11,6 +11,7 @@
 <body>
 <script type="text/x-handlebars">
 <!-- Header -->
+<div id="backgroundPopup" onclick="crossClicked();"></div>
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header"> <a href="" class="navbar-brand">SocialHub</a>
@@ -44,6 +45,7 @@
   </div>
 </div>
 {{outlet}}
+
 <!-- Footer -->
 <footer>
     <p>&copy; 2014 - SocialHub</p>
@@ -53,6 +55,8 @@
 <!-- Content -->
 <div class="container body-content" style="margin-top:60px">
   <div class="row">
+  <div id="toPopup" style="max-width:100%; width:inherit">
+		</div>
     <!-- Nav Tabs -->
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked">
@@ -70,7 +74,7 @@
     <div class="col-md-9">
   
 	  {{outlet}}
-
+		
 	</div>
   </div>
   <hr />
@@ -122,14 +126,11 @@
   <hr />
 </script> 
 <script type="text/x-handlebars" id="myalbums">
-<<<<<<< HEAD
 <div class="tab-pane" id="myalbums">
-=======
->>>>>>> f7f6bfb48b12a194bc2fb70c2849cf485985725c
 <hr />
       <form role="form">
         <div class="row">
-          <div id="topopup" onclick="topopupClicked();"><h2>Create new album</h2></div>
+          <div id="topopup" onclick="topopupClicked('popup_content');"><h2>Create new album</h2></div>
           <hr>
         </div>
         <div class="row">
@@ -174,39 +175,29 @@
         </div>
       </form>
     <hr />
-	<div id="toPopup">
-  <div class="close" onclick="crossClicked();"></div>
-  <div id="popup_content" align="center"> <!--your content start-->
-    <row>
-      <div class="col-md-1"> </div>
-      <div class="col-md-9"> <h4>Creating New Album</h4> </div>
-      <div class="col-md-2"> <img id="clickcross" style="margin-left:20px" src="img/cross.png" onclick="crossClicked();"></div>
-    </row>
-    <row>
-      <form class="form-inline" role="form">
-        <div class="form-group" align="center">
-          <input type="text" class="form-control col-md-1" id="albumname" placeholder="Album name">
-        </div>
-      </form>
-    </row>
-    <row> <br>
-    </row>
-    <row>
-      <button type="button" class="btn btn-primary btn-sm">OK</button>
-    </row>
-  </div>
+	  <div id="popup_content" align="center" style="display:none;"> <!--your content start-->
+		<row>
+		  <div class="col-md-1"> </div>
+		  <div class="col-md-9"> <h4>Creating New Album</h4> </div>
+		  <div class="col-md-2"> <img id="clickcross" style="margin-left:20px" src="img/cross.png" onclick="crossClicked();"></div>
+		</row>
+		<row>
+		  <form class="form-inline" role="form">
+			<div class="form-group" align="center">
+			  <input type="text" class="form-control col-md-1" id="albumname" placeholder="Album name">
+			</div>
+		  </form>
+		</row>
+		<row> <br>
+		</row>
+		<row>
+		  <button type="button" class="btn btn-primary btn-sm">OK</button>
+		</row>
+	  </div>
   <!--your content end--> 
-  </div>
 <!--toPopup end-->
-<div class="loader"></div>
-<div id="backgroundPopup" onclick="crossClicked();"></div>
-<<<<<<< HEAD
+
 </div>
-</script>
-
-=======
->>>>>>> f7f6bfb48b12a194bc2fb70c2849cf485985725c
-
 </script> 
 <script type="text/x-handlebars" id="myfriends">
 <hr />
@@ -667,7 +658,7 @@
   </ul>
 </div>
 <link href="../css/post.css" rel="stylesheet" type="text/css" />
-</script>
+</script> 
 <script src="../js/libs/jquery-1.10.2.js"></script> 
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/script.js"></script> 

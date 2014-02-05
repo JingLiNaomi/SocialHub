@@ -7,7 +7,6 @@
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="../css/site.css" rel="stylesheet" type="text/css" />
 <link href="../css/stylemukhtar.css" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
 <script type="text/x-handlebars">
@@ -49,8 +48,7 @@
 <footer>
     <p>&copy; 2014 - SocialHub</p>
 </footer>
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="main">
 <!-- Content -->
 <div class="container body-content" style="margin-top:60px">
@@ -64,7 +62,7 @@
         <li class="tab" id="myalbumsTab" onclick="return activate('myalbumsTab');">{{#link-to 'myalbums'}}Albums{{/link-to}}</li>
         <li class="tab" id="mynewsTab" onclick="return activate('mynewsTab');">{{#link-to 'mynews'}}My news{{/link-to}}</li>
         <li class="tab" id="mycirclesTab" onclick="return activate('mycirclesTab');">{{#link-to 'mycircles'}}Circles{{/link-to}}</li>
-        <li class="tab" onclick="return activate();"><a href="#">My blogs</a></li>
+        <li class="tab" id="myblogTab" onclick="return activate('myblogTab');">{{#link-to 'myblog'}}My blog{{/link-to}}</li>
         <li class="tab" onclick="return activate();"><a href="#">My settings</a></li>
       </ul>
     </div>
@@ -78,7 +76,6 @@
   <hr />
 </div>
 </script> 
-
 <script type="text/x-handlebars" id="login">
 <div class="container body-content" style="margin-top:60px">
   <div class="row"> 
@@ -123,10 +120,12 @@
     <div class="col-md-3"> </div>
   </div>
   <hr />
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="myalbums">
+<<<<<<< HEAD
 <div class="tab-pane" id="myalbums">
+=======
+>>>>>>> f7f6bfb48b12a194bc2fb70c2849cf485985725c
 <hr />
       <form role="form">
         <div class="row">
@@ -201,12 +200,15 @@
 <!--toPopup end-->
 <div class="loader"></div>
 <div id="backgroundPopup" onclick="crossClicked();"></div>
+<<<<<<< HEAD
 </div>
 </script>
 
+=======
+>>>>>>> f7f6bfb48b12a194bc2fb70c2849cf485985725c
 
+</script> 
 <script type="text/x-handlebars" id="myfriends">
-<div class="tab-pane" id="myfriends">
 <hr />
   <div class="friend-list-row">
     <div class="col-md-2"> <img src="../test images/TestImg1.jpg" class="img-auto-size img-rounded" /> </div>
@@ -268,11 +270,8 @@
     </div>
   </div>
   <hr />
-  </div>
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="mymessages">
-    <div class="tab-pane" id="mymessages">
 <ul class="nav nav-pills nav-stacked">
 	<hr />
     <li>
@@ -305,11 +304,8 @@
 		<hr>
 	</li>
 </ul>
-</div>
 </script> 
-
 <script type="text/x-handlebars" id="mycircles">
-    <div class="tab-pane" id="mycircles">
   <hr />
   <div class="row content friend-list-row">
     <div class="col-md-2"> <img src="../test images/circle.png" class="img-auto-size img-circle" /> </div>
@@ -368,11 +364,8 @@
     </div>
   </div>
   <hr />
-  </div>
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="myprofile">
-    <div class="tab-pane" id="myprofile">
 
 <!-- My Profile -->
 <div class="row"> 
@@ -466,12 +459,9 @@
       </ul>
     </div>
   </div>
-</div>
 <link href="../css/post.css" rel="stylesheet" type="text/css" />
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="mynews">
-    <div class="tab-pane" id="mynews">
 <!-- My News -->
 
 <div class="row">
@@ -632,18 +622,58 @@
     </li>
   </ul>
 </div>
+<link href="../css/post.css" rel="stylesheet" type="text/css" />
+</script> 
+<script type="text/x-handlebars" id="myblog">
+<!-- My Blog -->
+<div class="row"> 
+  <!-- Blog Heading -->
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="text-center">My Blog</h2>
+    </div>
+    <div class="col-md-3">
+      <input type="button"  value="New article" class="btn btn-success pull-right" style="margin-top:20px"/>
+    </div>
+   
+  </div>
+   <hr>
+  <!-- Blog List -->
+  <ul class="list-unstyled">
+    <li>
+      <div class="row">
+        <div class="col-md-3"> <b>{Ariticle Title}</b> </div>
+        <div class="col-md-3">
+          <p>posted on {date time}</p>
+        </div>
+        <div class="col-md-3">
+          <input type="button"  value="Read" class="btn btn-primary btn-post pull-right"/>
+        </div>
+      </div>
+      <hr>
+    </li>
+    <li>
+      <div class="row">
+        <div class="col-md-3"> <b>{Ariticle Title}</b> </div>
+        <div class="col-md-3">
+          <p>posted on {date time}</p>
+        </div>
+        <div class="col-md-3">
+          <input type="button"  value="Read" class="btn btn-primary btn-post pull-right"/>
+        </div>
+      </div>
+      <hr>
+    </li>
+  </ul>
 </div>
 <link href="../css/post.css" rel="stylesheet" type="text/css" />
 </script>
-
-
-<script src="../js/libs/jquery-1.10.2.js"></script>
+<script src="../js/libs/jquery-1.10.2.js"></script> 
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/script.js"></script> 
-<script src="../js/libs/utils.js"></script>
+<script src="../js/libs/utils.js"></script> 
 <script src="../js/libs/handlebars-1.1.2.js"></script> 
 <script src="../js/libs/ember-1.3.1.js"></script> 
 <script src="../js/App.js"></script>
-
 </body>
 </html>

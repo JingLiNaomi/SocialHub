@@ -10,6 +10,7 @@ App.Router.map(function() {
 		this.resource('myprofile');
 		this.resource('myalbums');
 		this.resource('mycircles');
+		this.resource('mynews');
 	});
 });
 

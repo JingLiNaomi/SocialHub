@@ -82,7 +82,7 @@
 
 .post-profile
 {
-	margin-left:50px;
+	margin-left:7px;
 	}
 
 .img-small
@@ -96,3 +96,14 @@
 	width:100px;
 	height:100px;
 }
+
+.btn-post
+{
+	margin-top:1px;
+	height:35px;
+}
+
+.news
+{
+	margin-bottom:20px;
+	}

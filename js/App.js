@@ -28,3 +28,10 @@ App.IndexRoute = Ember.Route.extend({
 		this.transitionTo('main');	
 	}
 });
+
+App.MyprofileRoute = Ember.Route.extend({
+	model: function() {
+	return Ember.$.getJSON('http://localhost/SocialHub/php/test.php');
+	}
+});
+

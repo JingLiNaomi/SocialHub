@@ -160,3 +160,8 @@ hr
 {
 	display:none;
 }
+
+#album_popup
+{
+	width:400px;
+}

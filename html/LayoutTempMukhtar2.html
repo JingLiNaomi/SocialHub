@@ -187,12 +187,12 @@
   <div class="panel panel-default">
   <div class="panel-heading">New Album<img id="circle_close_img" style="width:25px; cursor:pointer; float:right" src="../img/close.png" onclick="crossClicked();"></div>
   <div class="panel-body" style="width:400px">
-	<form role="form">
+	<form role="form" {{action 'createAlbum' on='submit'}}>
 		<div class="form-group">
 		  <label for="NameInput">Album Name:</label>
-		  <input type="text" class="form-control" id="NameInput" style="width:240px">
+		  {{input value=albumName type="text" class="form-control" id="NameInput" placeholder="Enter name"}}
 		</div>
-		<button type="button" class="btn btn-primary">Create</button>
+		<button type="submit" class="btn btn-primary">Create</button>
 		<input type="reset" class="reset">
   	</form>
   
@@ -376,6 +376,7 @@
   </div>
   <hr />
 
+<!-- DANIYAR: Copy this part into original layout -->
   <div class="popup" id="circle_popup">
   <div class="panel panel-default">
   <div class="panel-heading">New Circle <img id="circle_close_img" style="width:25px; cursor:pointer; float:right" src="../img/close.png" onclick="crossClicked();"></div>
@@ -396,6 +397,7 @@
   </div>
 </div>
 </div>
+<!--Ends here-->
 </script> 
 <script type="text/x-handlebars" id="myprofile">
 
@@ -765,65 +767,66 @@
     <div class="tab-pane container active" id="personalInfo">
 	<br>
 	<div class="col-md-4">
-	<form role="form">
-  <div class="form-group">
+	<form role="form" {{action 'changePersonalSettings' on='submit'}}>
+  	<div class="form-group">
     <label for="firstNameInput">Your First Name:</label>
-    <input type="text" class="form-control" id="firstNameInput">
+	{{input value=firstName type="text" class="form-control" id="firstNameInput" placeholder=""}}
   </div>
   <div class="form-group">
     <label for="surnameInput">Your Surname:</label>
-    <input type="text" class="form-control" id="surnameInput">
+    {{input value=surname type="text" class="form-control" id="surnameInput" placeholder=""}}
   </div>
   <div class="form-group">
     <label for="schoolInput">Your School:</label>
-    <input type="text" class="form-control" id="schoolInput" placeholder="">
+	{{input value=school type="text" class="form-control" id="schoolInput" placeholder=""}}
   </div>
   <div class="form-group">
     <label for="countryInput">Your Country:</label>
-    <select class="form-control">
-      <option>China</option>
-      <option>Kazakhstan</option>
-      <option>United Kingdoms</option>
-    </select>
+    {{view Ember.Select class="form-control" id="countryInput" content=countries}}
   </div>
   <div class="form-group">
-    <label for="cityInput">Your Country:</label>
-    <select class="form-control">
-      <option>Astana</option>
-      <option>Beijing</option>
-      <option>London</option>
-    </select>
+    <label for="cityInput">Your City:</label>
+	 {{view Ember.Select class="form-control" id="cityInput" content=cities}}
   </div>
   <div class="form-group">
     <label for="genderInput">Your Gender:</label>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="gender1" value="isMale" checked>
-        Male </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="gender2" value="isFemale">
-        Female </label>
-    </div>
+    <label>
+        {{view Ember.Gender name="selectionTest" selectionBinding="gender" value="1"}}
+        Male
+    </label>
+    
+    <label>
+        {{view Ember.Gender name="selectionTest" selectionBinding="gender" value="0"}}
+        Female
+    </label>
   </div>
   <div class="form-group">
     <label for="relationshipInput">Relationship Status:</label>
-    <select class="form-control">
-      <option>Single</option>
-      <option>In Relationship</option>
-      <option>Married</option>
-    </select>
+	 {{view Ember.Select class="form-control" id="relationshipInput" content=relationship}}
   </div>
   <div class="form-group">
     <label for="dateOfBirth">Your Date Of Birth:</label>
-    <input type="date" name="bday">
+	{{input value=dateOfBirth type="date" class="form-control" id="dateOfBirth" placeholder=""}}
   </div>
   <div class="form-group">
     <label for="occupation">Your Occupation</label>
-    <input type="text" class="form-control" id="occupation" placeholder="">
+	{{ input value=occupation type="text" class="form-control" id="occupation"}}
   </div>
-  <button type="button" class="btn btn-primary">Save</button>
+  <hr>
+  <h3><b>Changing Password</b></h3>
+  <div class="form-group">
+    <label for="currentPassword">Current Password</label>
+	{{ input value=currentPassword type="password" class="form-control" id="currentPassword"}}
+  </div>
+  <div class="form-group">
+    <label for="newPassword">New Password</label>
+	{{ input value=newPassword type="password" class="form-control" id="newPassword"}}
+  </div>
+  <div class="form-group">
+    <label for="confirmNewPassword">Retype New Password</label>
+	{{ input value=confirmNewPassword type="password" class="form-control" id="confirmNewPassword"}}
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
 </div>
 <div class="col-md-7">

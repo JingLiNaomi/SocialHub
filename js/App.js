@@ -55,3 +55,22 @@ App.LoginController = Ember.Controller.extend({
 	}
 });
 
+App.MysettingsController = Ember.Controller.extend({
+  countries: ["China", "Kazakhstan", "UK"],
+  cities: ["Astana","Beijing","London"],
+  gender: 1,
+  relationship: ["Single","In Relationship","Married"]
+});
+
+Ember.Gender = Ember.View.extend({
+    tagName : "input",
+    type : "radio",
+    attributeBindings : [ "name", "type", "value", "checked:checked:" ],
+    click : function() {
+        this.set("selection", this.$().val())
+    },
+    checked : function() {
+        return this.get("value") == this.get("selection");   
+    }.property()
+});
+

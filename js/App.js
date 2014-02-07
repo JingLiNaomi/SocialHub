@@ -28,3 +28,29 @@ App.IndexRoute = Ember.Route.extend({
 		this.transitionTo('main');	
 	}
 });
+
+App.LoginController = Ember.Controller.extend({
+	emailLogin: '',
+	passwordLogin:'',
+	email:'',
+	password1:'',
+	password2:'',
+	actions: {
+		register: function()
+		{
+			$.post('../php/register.php',
+			{
+				email: this.get('email'),
+				password:this.get('password')
+			},
+			function(data){
+				alert(data);
+			}, 
+			"json")
+		},
+		
+		login: function()
+		{
+		}
+	}
+});

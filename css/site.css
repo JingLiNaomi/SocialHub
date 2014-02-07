@@ -3,8 +3,18 @@
 {
 	height:120px;
 	padding-top: 10px;
-
 	padding-bottom: 10px;
+}
+
+.create-circle-row
+{
+	height: 100px;
+	margin-bottom: 15px;
+}
+
+.create-circle-col
+{
+	height: 100%;
 }
 
 
@@ -130,4 +140,23 @@ hr
 {
 	height: 100px;
 	padding-top: 10px;
+}
+
+.popup
+{
+	background: none repeat scroll 0 0 #FFFFFF;
+	margin:0 auto; /* remove this comment if you want scroll bar overflow-y:scroll; height:200px */
+	position: relative;
+	top: 20%;	
+	display:none;
+}
+
+#circle_popup
+{
+	width:400px;
+}
+
+.reset
+{
+	display:none;
 }

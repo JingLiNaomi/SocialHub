@@ -176,7 +176,7 @@
         </div>
       </form>
     <hr />
-	  <div id="popup_content" align="center" style="display:none;"> <!--your content start-->
+	  <div class="popup" id="popup_content" align="center"> <!--your content start-->
 		<row>
 		  <div class="col-md-1"> </div>
 		  <div class="col-md-9"> <h4>Creating New Album</h4> </div>
@@ -187,6 +187,7 @@
 			<div class="form-group" align="center">
 			  <input type="text" class="form-control col-md-1" id="albumname" placeholder="Album name">
 			</div>
+			<input type="reset" class="reset" id="album_reset">
 		  </form>
 		</row>
 		<row> <br>
@@ -298,6 +299,16 @@
 </ul>
 </script> 
 <script type="text/x-handlebars" id="mycircles">
+	<div class="create-circle-row">
+		<div class="col-md-7 create-circle-col">
+			<h1>My Circles</h1>
+		</div>
+		<div class="col-md-2 create-circle-col">
+			<div style="margin-top:25px">
+				<button type="button" class="btn btn-success btn-lg" onclick="topopupClicked('circle_popup')">Create circle</button>
+			</div>
+		</div>
+	</div>
   <hr />
   <div class="row content friend-list-row">
     <div class="col-md-2"> <img src="../test images/circle.png" class="img-auto-size img-circle" /> </div>
@@ -356,6 +367,32 @@
     </div>
   </div>
   <hr />
+
+  <div class="popup" id="circle_popup">
+  <div class="panel panel-default">
+  <div class="panel-heading">New Circle <img id="circle_close_img" style="width:25px; cursor:pointer; float:right" src="../img/close.png" onclick="crossClicked();"></div>
+  <div class="panel-body" style="width:400px">
+	<form role="form">
+		<div class="form-group">
+		  <label for="NameInput">Name:</label>
+		  <input type="text" class="form-control" id="NameInput">
+		</div>
+		<div class="form-group">
+		  <label for="ParticipantInput">Participant:</label>
+		  <textarea class="form-control" id="ParticipantInput" style="height:100px; overflow-y:auto"></textarea>
+		</div>
+		<button type="button" class="btn btn-primary">Create</button>
+		<input type="reset" class="reset">
+  	</form>
+  
+  </div>
+</div>
+  
+  
+  
+  
+		
+  </div>
 </script> 
 <script type="text/x-handlebars" id="myprofile">
 
@@ -658,8 +695,7 @@
     </li>
   </ul>
 </div>
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="messaging">
 <!-- Row for photo, name and date -->
     <div class="row">
@@ -711,8 +747,7 @@
     		<button type="button" class="btn btn-info">Send</button>
     	</div>
     </div>
-</script>
-
+</script> 
 <script type="text/x-handlebars" id="mysettings">
 <div class="row">
   <h2 class="text-center">Settings</h2>
@@ -845,8 +880,7 @@
   </div>
 </div>
 
-</script>
-
+</script> 
 <script src="../js/libs/jquery-1.10.2.js"></script> 
 <script src="../js/bootstrap/bootstrap.js"/></script> 
 <script src="../js/libs/script.js"></script> 

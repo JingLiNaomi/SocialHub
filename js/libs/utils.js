@@ -23,6 +23,7 @@ addPopup = function(id)
 
 removePopup = function(id)
 {
+	$('.reset').click();
 	$('#'+id).css("display", "none");
 }
 

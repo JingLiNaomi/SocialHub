@@ -41,7 +41,7 @@ App.LoginController = Ember.Controller.extend({
 			$.post('../php/register.php',
 			{
 				email: this.get('email'),
-				password:this.get('password')
+				password:this.get('password1')
 			},
 			function(data){
 				alert(data);
@@ -51,6 +51,15 @@ App.LoginController = Ember.Controller.extend({
 		
 		login: function()
 		{
+			$.post('../php/login.php',
+			{
+				email: this.get('emailLogin'),
+				password:this.get('passwordLogin')
+			},
+			function(data){
+				
+			}, 
+			"json")
 		}
 	}
 });

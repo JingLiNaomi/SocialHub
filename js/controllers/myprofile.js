@@ -1,12 +1,6 @@
 // JavaScript Document
-App.MyprofileController = Ember.Controller.extend({
-	Name: 'Jing',
-	LastStatus:'lol',
-	City:'Handan',
-	Country:'',
-	Gender:'',
-	DOB:'',
-	School:'',
-	Relationship:'',
-	Occupation:''
-	})
+App.MyprofileRoute = Ember.Route.extend({
+	model: function() {
+	return $.getJSON('../php/myprofile.php');
+	}
+});

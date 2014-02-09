@@ -29,6 +29,14 @@
 			else
 				$status = "";
 			
+			//Get statuses and comments
+			$posts = array();
+			$result = mysqli_query($con,"SELECT * FROM Statuses WHERE UserId='$userid'");
+			while($row = mysqli_fetch_array($result))
+			{
+				$post = array("Name"=>$fname,"Text"=>$row['Status'],"DateTime"=>$row['DateTimeCreated']);
+				array_push($posts, $post);
+			}
 			
 			//Wrap data
 			$arr = array("Name"=> $fname." ".$lname, 
@@ -39,7 +47,8 @@
 				'DOB'=>$dob,
 				'School'=>$school,
 				'Relationship'=>$relationship,
-				'Occupation'=>$occupation);
+				'Occupation'=>$occupation,
+				'post'=>$posts);
 			echo json_encode($arr);
 		}
 		

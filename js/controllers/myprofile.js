@@ -1,6 +1,14 @@
 // JavaScript Document
-App.MyprofileRoute = Ember.Route.extend({
-	model: function() {
-	return $.getJSON('../php/myprofile.php');
-	}
+App.MyprofileController = Ember.ObjectController.extend({
+  
+  actions: {
+    PostStatus: 
+	function() {
+				$.post( "../php/poststatus.php", { userid: 1, status: "jing's third status" })
+				  .done(function( data ) 
+				  {
+					alert(data );
+				  });
+               }
+          }
 });

@@ -20,7 +20,6 @@
 				  $relationship = $row['RelationshipStatus'];
 				  $occupation = $row['Occupation'];
 				  $school = $row['SchoolName'];
-				  
 			}
 			
 			//Get latest status

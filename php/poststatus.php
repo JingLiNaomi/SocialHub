@@ -2,17 +2,18 @@
 $con = new mysqli("localhost","root","","mydb");
 $status = $_POST['status'];
 $userid = $_POST['userid'];  
-$datetime = date('m/d/Y h:i:s', time());;
 $msg = "";
 if (mysqli_connect_errno())
 {
    //ERROR
-   $msg = "Failed posting status, please try again later";
+   $msg = "Failed connecting to database, please try again later";
 }
 else
 {
-	mysqli_query($con,"INSERT INTO Statuses (Status, DateTimeCreated, UserId) VALUES ('$status', '$datetime','$userid')");
-	$msg = "success";
+	if(!mysqli_query($con,"INSERT INTO Statuses (Status, DateTimeCreated, UserId) VALUES ('$status', NOW(),'$userid')"))
+	 	$msg = mysqli_error($con);
+	else
+		$msg = "success";
 }
-echo $msg.$status.$userid.$datetime;
+echo $msg;
 ?>

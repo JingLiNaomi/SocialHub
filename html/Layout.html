@@ -412,7 +412,7 @@
     </div>
   </div>
   <!-- Right Column  -->
-  <div class="col-md-6"> 
+  <div class="col-md-8"> 
     <!-- Name Section -->
     <div class="row">
       <h4>{{Name}}</h4>
@@ -443,28 +443,22 @@
     <!-- Status List -->
     <div class="row">
       <ul class="list-unstyled">
-        <li class="postHolder"> 
-          <!-- Status Section -->
+	   {{#each post}}
+	    <li>
           <div class="row">
-            <table style="margin-left:10px">
-            <tr>
-            <td rowspan="2">
-             <img src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"> </div></td>
-            <td>
-              <a>{full name}</a>: <span>{status text}</span></td>
-              </tr>
-              <tr>
-              <td class="postFooter"> <span>{posted date time}</span></td>
-            </tr></table>
-            </div>
-			</div>
-			<div class="row">
-			 <!-- Comment Section -->
+        <div class="col-md-1"> <img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small post-profile"> </div>
+        <div class="col-md-9" style="margin-left:20px"> 
+          <!-- Row 1 -->
+          <div class="row"> <a>{{Name}}</a> : {{Text}} </div>
+          <!-- Row 2 Date Time -->
+          <div class="postFooter" style="margin-left:-14px"><span>{{DateTime}}</span></div>
+          <!-- Comment Section -->
+          <div class="row">
             <div class="commentSection">
-            <div style="display: block">
-              <ul>
-                <li class="commentHolder">
-                  <table>
+              <div style="display: block">
+                <ul>
+                  <li class="commentHolder">
+                    <table>
                       <tr> 
                         <!-- Comment Profile Image -->
                         <td rowspan="2"><img  src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-small"></td>
@@ -475,16 +469,19 @@
                         <td class="postFooter"><span>{commented date time}</span></td>
                       </tr>
                     </table>
-                </li>
-              </ul>
+                  </li>
+                </ul>
               </div>
               <div style="display: block" class="publishComment">
-                {{input type="text" value=comment placeholder="Write a comment..." class=" form-control"}}
+                <textarea class="commentTextArea" placeholder="write a comment..."></textarea>
                 <input type="button"  value="Comment" class="btn btn-primary btn-post"/>
               </div>
             </div>
           </div>
-        </li>
+        </div>
+      </div>
+    </li>
+	{{/each}}
       </ul>
     </div>
   </div>

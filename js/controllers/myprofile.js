@@ -1,6 +1,6 @@
 // JavaScript Document
 App.MyprofileController = Ember.ObjectController.extend({
-  
+  post:[{Name:'Naomi',Text:'today is sunny',DateTime:'09/02/2014'},{Name:'Naomi',Text:'today is sunny',DateTime:'09/02/2014'}],
   actions: {
     PostStatus: 
 	function() {
@@ -9,6 +9,8 @@ App.MyprofileController = Ember.ObjectController.extend({
 				  {
 					alert(data );
 				  });
+				  
+				  this.set('LastStatus',this.get('status'));
                }
           }
 });

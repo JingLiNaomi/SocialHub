@@ -406,7 +406,7 @@
   <!-- Left Column -->
   <div class="col-md-3"> 
     <!-- Profile Photo -->
-    <div class="row"> <img src="../photo/default_profile_pic.jpg" alt="Profile Photo" class="img-rounded" width="200" height="200"> </div>
+    <div class="row"><img src="../photo/chuck.jpg" alt="Profile Photo" class="img-rounded" width="200" height="200" onclick="topopupClicked('image_popup')"></div>
     <!-- My Links -->
     <div class="row" style="margin-top:20px">
       <ul class="list-unstyled">
@@ -493,6 +493,25 @@
       </ul>
     </div>
   </div>
+  
+  <div class="popup" id="image_popup">
+  <div class="panel panel-default">
+  <div class="panel-heading">New Circle <img id="circle_close_img" style="width:25px; cursor:pointer; float:right" src="../img/close.png" onclick="crossClicked();"></div>
+  <div class="panel-body" style="width:400px">
+	<form role="form">
+	<div class="col-md-9">
+		<img src="../photo/Chuck.jpg" style="height:600px"/>
+	</div>
+	<div class="col-md-3">
+		<div class="row">
+		Comment
+		</div>
+	</div>
+  	</form>
+  
+  </div>
+</div>		
+</div>
 
 </script> 
 <script type="text/x-handlebars" id="mynews">
